@@ -1,7 +1,7 @@
 # 201912-6-Adtracking-Fraud-Detection-rn2494-jy3012
 
 ### Contributors
-1. Ruturaj Nenu - rn2494
+1. Ruturaj Nene - rn2494
 2. Jeswanth Yadagani - jy3012
 
 ### Files
