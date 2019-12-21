@@ -104,7 +104,13 @@ data = spark.createDataFrame(dataf,schema=mySchema)
 
 test_output = model.transform(data)
 test_output_bq = test_output.drop('feature_vector','rawPrediction','probability')
-test_output_bq.write.csv('gs://bucket-adtrack/data/output',header=True)
+
+##ToDo
+directory = 'Enter url where predictions data has to be saved in Cloud Storage'
+output_dataset = 'Enter dataset id at BigQuery'
+output_table_1 = 'Predictions_datastudio'
+
+test_output_bq.write.csv(directory,header=True)
 
 
 from google.cloud import bigquery
@@ -121,11 +127,6 @@ def saveToBigQuery(sc, output_dataset, output_table, directory):
         ).split())
     output_path = sc._jvm.org.apache.hadoop.fs.Path(directory)
     output_path.getFileSystem(sc._jsc.hadoopConfiguration()).delete(output_path, True)
-
-
-directory = 'gs://bucket-adtrack/data/output'
-output_dataset = 'bigdata-jy3012:adtrack_project'
-output_table_1 = 'Predictions_datastudio'
 
 saveToBigQuery(spark, output_dataset, output_table_1, directory)
 
