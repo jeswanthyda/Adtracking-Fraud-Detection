@@ -11,7 +11,7 @@ import webbrowser
 def upload_to_bigquery(filepath,tablename):
     # TODO(developer): Set key_path to the path to the service account key
     #                  file.
-    key_path = ''
+    key_path = '' #ToDo
 
     credentials = service_account.Credentials.from_service_account_file(
         key_path,
@@ -22,6 +22,7 @@ def upload_to_bigquery(filepath,tablename):
         project=credentials.project_id,)
     
     filename = filepath
+    #ToDo
     dataset_id = 'enter dataset id of bigQuery where the files has to be uploaded as tables'
     table_id = tablename
 
@@ -39,6 +40,7 @@ def upload_to_bigquery(filepath,tablename):
 
     print("Loaded {} rows into {}:{}.".format(job.output_rows, dataset_id, table_id))
 
+    #ToDo
     bucket_name = 'Enter name of your bucket'
 
     destination_uri = "gs://{}/bqdata/{}.csv".format(bucket_name,tablename)
@@ -92,7 +94,7 @@ def wait_for_job(dataproc, project, region, job_id):
             print('Job finished.')
             return job
 
-
+#ToDo
 project = 'enter project id'
 region = 'enter region of cluster'
 cluster_name = 'enter cluster name'
