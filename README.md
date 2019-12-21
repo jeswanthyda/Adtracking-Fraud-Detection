@@ -1,5 +1,9 @@
 # 201912-6-Adtracking-Fraud-Detection-rn2494-jy3012
 
+### Contributors
+1. Ruturaj Nenu - rn2494
+2. Jeswanth Yadagani - jy3012
+
 ### Files
 1. Big_data_feature_engineering.ipynb - Contains handling of unbalanced data all extracted and tried methods of feature engineering.
 2. GUI_adtrack.py - File to launch GUI of the system
