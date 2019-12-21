@@ -173,4 +173,4 @@ predictionsAndLabels = test_output_rdd.map(lambda x: (x.prediction,x.is_attribut
 metrics1 = MulticlassMetrics(predictionsAndLabels)
 metrics2 = BinaryClassificationMetrics(predictionsAndLabels)
 print('ROC of random forest model:{}'.format(metrics2.areaUnderROC))
-model.write().overwrite().save('gs://bucket-adtrack/model')
+model.write().overwrite().save('Enter URL where the model has to be saved')  ##Todo
